@@ -20,7 +20,7 @@
             <class name="AssertScriptA" />
         </classes>
     </test>
-    <test name="Test - browser Chrome" >
+    <test name="Test - browser IE" >
         <parameter name="browser" value="internet explorer"/>
         <!--<parameter name="sPassword" value="Xcg7299bnSmMuRLp9ITw"/>-->
         <classes>

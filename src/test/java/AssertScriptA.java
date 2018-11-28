@@ -15,6 +15,7 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 
+
 public class AssertScriptA {
   private static String productName;
   private static String productQty;
@@ -60,12 +61,12 @@ public class AssertScriptA {
     checkProductNamePriceQuantity();
   }
 
-  @AfterClass
-  public void releaseDriver(){
-    if (driver!= null) {
-      driver.quit();
-    }
-  }
+//  @AfterClass
+//  public void releaseDriver(){
+//    if (driver!= null) {
+//      driver.quit();
+//    }
+//  }
 
   private static void checkProductNamePriceQuantity(){
     WebElement pageProductName = driver.findElement(By.cssSelector("h1.h1"));
@@ -113,7 +114,6 @@ public class AssertScriptA {
     productSave.click();
     wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("growls")))); //Check popup message
   }
-
   private static void addProductOpenPanel() {
     WebElement navCatalog = driver.findElement(By.id("subtab-AdminCatalog"));
     WebElement menuTovar = driver.findElement(By.id("subtab-AdminProducts"));
